@@ -1,0 +1,824 @@
+
+<!DOCTYPE html>
+<html>
+<head id="Head1" runat="server">
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WatchStores</title>
+    <link href="Contents/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <!--jquery first, bootstrap later-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript" src="Contents/js/bootstrap.js"></script>
+    
+    <link href="Contents/css/bootstrap.min.css" rel="stylesheet">
+    <link href="Contents/css/nn-style.css" rel="stylesheet">
+</head>
+
+<body>
+    <form id="form1" runat="server">
+        <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server">
+        </asp:ToolkitScriptManager>
+        <div class="container">
+            <header class="nn-header">               
+                <div class="col-md-4">
+                    <a href="#"><img src="Contents/img/logo.png" /></a>
+                </div><!-- End Logo -->
+
+                <div class="col-md-4">
+                    <form class="navbar-form navbar-left" role="search">
+                        <div class="input-group input-group-lg">
+                            <input type="text" class="form-control" placeholder="Search" />
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+                            </span>
+                        </div>
+                    </form>
+                </div><!--end search box-->
+
+                <div class="col-md-4">
+                    <div class="pull-right">
+                        <a href="#">
+                            <span class="glyphicon glyphicon-shopping-cart"></span>
+                            <strong>CART</strong>
+                            <span>0 item(s) for:</span>
+                            <span><strong>$0</strong></span>
+                        </a>
+                    </div>
+                </div><!--end cart-box-->
+            </header>
+        
+            <nav class="navbar navbar-default">
+                    <div class="navbar-header">
+                        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".js-navbar-collapse" >
+                           <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand " href="#"><span class="glyphicon glyphicon-home "></span></a>
+                    </div>
+
+
+                    <div class="navbar-collapse collapse js-navbar-collapse">
+                        <ul class="nav navbar-nav">
+                           	
+                            <li class="dropdown mega-dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Brand<span class="glyphicon glyphicon-chevron-down pull-right"></span></a>
+
+                                <ul class="dropdown-menu mega-dropdown-menu row">
+                                    <li class="col-sm-3">
+                                        <ul>
+                                            <li class="dropdown-header">Famous Brand</li>
+                                            <li><a href="#">Unique Features</a></li>
+                                            <li><a href="#">Image Responsive</a></li>
+                                            <li><a href="#">Auto Carousel</a></li>
+                                            <li><a href="#">Newsletter Form</a></li>
+                                            <li><a href="#">Four columns</a></li>
+                                        
+                                        </ul>
+                                    </li>
+                                    <li class="col-sm-3">
+                                        <ul>
+                                            <li class="dropdown-header">Dresses</li>
+                                            <li><a href="#">Unique Features</a></li>
+                                            <li><a href="#">Image Responsive</a></li>
+                                            <li><a href="#">Auto Carousel</a></li>
+                                            <li><a href="#">Newsletter Form</a></li>
+                                            <li><a href="#">Four columns</a></li>
+                                            <li class="divider"></li>
+                                            <li class="dropdown-header">Tops</li>
+                                            <li><a href="#">Good Typography</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="col-sm-3">
+                                        <ul>
+                                            <li class="dropdown-header">Jackets</li>
+                                            <li><a href="#">Easy to customize</a></li>
+                                            <li><a href="#">Glyphicons</a></li>
+                                            <li><a href="#">Pull Right Elements</a></li>
+                                            <li class="divider"></li>
+                                            <li class="dropdown-header">Pants</li>
+                                            <li><a href="#">Coloured Headers</a></li>
+                                            <li><a href="#">Primary Buttons & Default</a></li>
+                                            <li><a href="#">Calls to action</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="col-sm-3">
+                                        <ul>
+                                            <li class="dropdown-header">Accessories</li>
+                                            <li><a href="#">Default Navbar</a></li>
+                                            <li><a href="#">Lovely Fonts</a></li>
+                                            <li><a href="#">Responsive Dropdown </a></li>
+                                            <li class="divider"></li>
+                                            <li class="dropdown-header">Newsletter</li>
+                                            <form class="form" role="form">
+                                                <div class="form-group">
+                                                    <label class="sr-only" for="email">Email address</label>
+                                                    <input type="email" class="form-control" id="email" placeholder="Enter email">
+                                                </div>
+                                                <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+                                            </form>
+                                        </ul>
+                                    </li>
+                                </ul>
+
+                            </li>
+                            
+                             <li class="dropdown mega-dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Women<span class="glyphicon glyphicon-chevron-down pull-right"></span></a>
+
+                                <ul class="dropdown-menu mega-dropdown-menu row">
+                                    <li class="col-sm-3">
+                                        <ul>
+                                            <li class="dropdown-header">New in Stores</li>
+                                            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                                                <div class="carousel-inner">
+                                                    <div class="item active">
+
+                                                        <a href="#"><img src="http://placehold.it/254x150/3498db/f5f5f5/&text=New+Collection" class="img-responsive" alt="product 1"></a>
+                                                        <h4><small>Summer dress floral prints</small></h4>
+                                                        <button class="btn btn-primary" type="button">49,99 €</button> <button href="#" class="btn btn-default" type="button"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</button>
+                                                    </div><!-- End Item -->
+                                                    <div class="item">
+                                                        <a href="#"><img src="http://placehold.it/254x150/ef5e55/f5f5f5/&text=New+Collection" class="img-responsive" alt="product 2"></a>
+                                                        <h4><small>Gold sandals with shiny touch</small></h4>
+                                                        <button class="btn btn-primary" type="button">9,99 €</button> <button href="#" class="btn btn-default" type="button"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</button>
+                                                    </div><!-- End Item -->
+                                                    <div class="item">
+                                                        <a href="#"><img src="http://placehold.it/254x150/2ecc71/f5f5f5/&text=New+Collection" class="img-responsive" alt="product 3"></a>
+                                                        <h4><small>Denin jacket stamped</small></h4>
+                                                        <button class="btn btn-primary" type="button">49,99 €</button> <button href="#" class="btn btn-default" type="button"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</button>
+                                                    </div><!-- End Item -->
+                                                </div><!-- End Carousel Inner -->
+                                            </div><!-- /.carousel -->
+                                            <li class="divider"></li>
+                                            <li><a href="#">View all Collection <span class="glyphicon glyphicon-chevron-right pull-right"></span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="col-sm-3">
+                                        <ul>
+                                            <li class="dropdown-header">Dresses</li>
+                                            <li><a href="#">Unique Features</a></li>
+                                            <li><a href="#">Image Responsive</a></li>
+                                            <li><a href="#">Auto Carousel</a></li>
+                                            <li><a href="#">Newsletter Form</a></li>
+                                            <li><a href="#">Four columns</a></li>
+                                            <li class="divider"></li>
+                                            <li class="dropdown-header">Tops</li>
+                                            <li><a href="#">Good Typography</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="col-sm-3">
+                                        <ul>
+                                            <li class="dropdown-header">Jackets</li>
+                                            <li><a href="#">Easy to customize</a></li>
+                                            <li><a href="#">Glyphicons</a></li>
+                                            <li><a href="#">Pull Right Elements</a></li>
+                                            <li class="divider"></li>
+                                            <li class="dropdown-header">Pants</li>
+                                            <li><a href="#">Coloured Headers</a></li>
+                                            <li><a href="#">Primary Buttons & Default</a></li>
+                                            <li><a href="#">Calls to action</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="col-sm-3">
+                                        <ul>
+                                            <li class="dropdown-header">Accessories</li>
+                                            <li><a href="#">Default Navbar</a></li>
+                                            <li><a href="#">Lovely Fonts</a></li>
+                                            <li><a href="#">Responsive Dropdown </a></li>
+                                            <li class="divider"></li>
+                                            <li class="dropdown-header">Newsletter</li>
+                                            <form class="form" role="form">
+                                                <div class="form-group">
+                                                    <label class="sr-only" for="email">Email address</label>
+                                                    <input type="email" class="form-control" id="email" placeholder="Enter email">
+                                                </div>
+                                                <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+                                            </form>
+                                        </ul>
+                                    </li>
+                                </ul>
+
+                            </li>
+                            <li class="dropdown mega-dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Men<span class="glyphicon glyphicon-chevron-down pull-right"></span></a>
+
+                                <ul class="dropdown-menu mega-dropdown-menu row">
+                                    <li class="col-sm-3">
+                                        <ul>
+                                            <li class="dropdown-header">New in Stores</li>
+                                            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                                                <div class="carousel-inner">
+                                                    <div class="item active">
+                                                        <a href="#"><img src="http://placehold.it/254x150/3498db/f5f5f5/&text=New+Collection" class="img-responsive" alt="product 1"></a>
+                                                        <h4><small>Summer dress floral prints</small></h4>
+                                                        <button class="btn btn-primary" type="button">49,99 €</button> <button href="#" class="btn btn-default" type="button"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</button>
+                                                    </div><!-- End Item -->
+                                                    <div class="item">
+                                                        <a href="#"><img src="http://placehold.it/254x150/ef5e55/f5f5f5/&text=New+Collection" class="img-responsive" alt="product 2"></a>
+                                                        <h4><small>Gold sandals with shiny touch</small></h4>
+                                                        <button class="btn btn-primary" type="button">9,99 €</button> <button href="#" class="btn btn-default" type="button"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</button>
+                                                    </div><!-- End Item -->
+                                                    <div class="item">
+                                                        <a href="#"><img src="http://placehold.it/254x150/2ecc71/f5f5f5/&text=New+Collection" class="img-responsive" alt="product 3"></a>
+                                                        <h4><small>Denin jacket stamped</small></h4>
+                                                        <button class="btn btn-primary" type="button">49,99 €</button> <button href="#" class="btn btn-default" type="button"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</button>
+                                                    </div><!-- End Item -->
+                                                </div><!-- End Carousel Inner -->
+                                            </div><!-- /.carousel -->
+                                            <li class="divider"></li>
+                                            <li><a href="#">View all Collection <span class="glyphicon glyphicon-chevron-right pull-right"></span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="col-sm-3">
+                                        <ul>
+                                            <li class="dropdown-header">Dresses</li>
+                                            <li><a href="#">Unique Features</a></li>
+                                            <li><a href="#">Image Responsive</a></li>
+                                            <li><a href="#">Auto Carousel</a></li>
+                                            <li><a href="#">Newsletter Form</a></li>
+                                            <li><a href="#">Four columns</a></li>
+                                            <li class="divider"></li>
+                                            <li class="dropdown-header">Tops</li>
+                                            <li><a href="#">Good Typography</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="col-sm-3">
+                                        <ul>
+                                            <li class="dropdown-header">Jackets</li>
+                                            <li><a href="#">Easy to customize</a></li>
+                                            <li><a href="#">Glyphicons</a></li>
+                                            <li><a href="#">Pull Right Elements</a></li>
+                                            <li class="divider"></li>
+                                            <li class="dropdown-header">Pants</li>
+                                            <li><a href="#">Coloured Headers</a></li>
+                                            <li><a href="#">Primary Buttons & Default</a></li>
+                                            <li><a href="#">Calls to action</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="col-sm-3">
+                                        <ul>
+                                            <li class="dropdown-header">Accessories</li>
+                                            <li><a href="#">Default Navbar</a></li>
+                                            <li><a href="#">Lovely Fonts</a></li>
+                                            <li><a href="#">Responsive Dropdown </a></li>
+                                            <li class="divider"></li>
+                                            <li class="dropdown-header">Newsletter</li>
+                                            <form class="form" role="form">
+                                                <div class="form-group">
+                                                    <label class="sr-only" for="email">Email address</label>
+                                                    <input type="email" class="form-control" id="email" placeholder="Enter email">
+                                                </div>
+                                                <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+                                            </form>
+                                        </ul>
+                                    </li>
+                                </ul>
+
+                            </li>
+                            
+                            <li class="dropdown mega-dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Kids<span class="glyphicon glyphicon-chevron-down pull-right"></span></a>
+
+                                <ul class="dropdown-menu mega-dropdown-menu row">
+                                    <li class="col-sm-3">
+                                        <ul>
+                                            <li class="dropdown-header">New in Stores</li>
+                                            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                                                <div class="carousel-inner">
+                                                    <div class="item active">
+                                                        <a href="#"><img src="http://placehold.it/254x150/3498db/f5f5f5/&text=New+Collection" class="img-responsive" alt="product 1"></a>
+                                                        <h4><small>Summer dress floral prints</small></h4>
+                                                        <button class="btn btn-primary" type="button">49,99 €</button> <button href="#" class="btn btn-default" type="button"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</button>
+                                                    </div><!-- End Item -->
+                                                    <div class="item">
+                                                        <a href="#"><img src="http://placehold.it/254x150/ef5e55/f5f5f5/&text=New+Collection" class="img-responsive" alt="product 2"></a>
+                                                        <h4><small>Gold sandals with shiny touch</small></h4>
+                                                        <button class="btn btn-primary" type="button">9,99 €</button> <button href="#" class="btn btn-default" type="button"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</button>
+                                                    </div><!-- End Item -->
+                                                    <div class="item">
+                                                        <a href="#"><img src="http://placehold.it/254x150/2ecc71/f5f5f5/&text=New+Collection" class="img-responsive" alt="product 3"></a>
+                                                        <h4><small>Denin jacket stamped</small></h4>
+                                                        <button class="btn btn-primary" type="button">49,99 €</button> <button href="#" class="btn btn-default" type="button"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</button>
+                                                    </div><!-- End Item -->
+                                                </div><!-- End Carousel Inner -->
+                                            </div><!-- /.carousel -->
+                                            <li class="divider"></li>
+                                            <li><a href="#">View all Collection <span class="glyphicon glyphicon-chevron-right pull-right"></span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="col-sm-3">
+                                        <ul>
+                                            <li class="dropdown-header">Dresses</li>
+                                            <li><a href="#">Unique Features</a></li>
+                                            <li><a href="#">Image Responsive</a></li>
+                                            <li><a href="#">Auto Carousel</a></li>
+                                            <li><a href="#">Newsletter Form</a></li>
+                                            <li><a href="#">Four columns</a></li>
+                                            <li class="divider"></li>
+                                            <li class="dropdown-header">Tops</li>
+                                            <li><a href="#">Good Typography</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="col-sm-3">
+                                        <ul>
+                                            <li class="dropdown-header">Jackets</li>
+                                            <li><a href="#">Easy to customize</a></li>
+                                            <li><a href="#">Glyphicons</a></li>
+                                            <li><a href="#">Pull Right Elements</a></li>
+                                            <li class="divider"></li>
+                                            <li class="dropdown-header">Pants</li>
+                                            <li><a href="#">Coloured Headers</a></li>
+                                            <li><a href="#">Primary Buttons & Default</a></li>
+                                            <li><a href="#">Calls to action</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="col-sm-3">
+                                        <ul>
+                                            <li class="dropdown-header">Accessories</li>
+                                            <li><a href="#">Default Navbar</a></li>
+                                            <li><a href="#">Lovely Fonts</a></li>
+                                            <li><a href="#">Responsive Dropdown </a></li>
+                                            <li class="divider"></li>
+                                            <li class="dropdown-header">Newsletter</li>
+                                            <form class="form" role="form">
+                                                <div class="form-group">
+                                                    <label class="sr-only" for="email">Email address</label>
+                                                    <input type="email" class="form-control" id="email" placeholder="Enter email">
+                                                </div>
+                                                <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+                                            </form>
+                                        </ul>
+                                    </li>
+                                </ul>
+
+                            </li>
+                            
+                            
+                           
+                           
+                            <li class="dropdown">
+                       			 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                           Tài khoản <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    @if (!Request.IsAuthenticated) { 
+                                        <li><a href="/Account/Login">Đăng nhập</a></li>
+                                        <li><a href="/Account/Forgot">Quên mật khẩu</a></li>
+                                        <li><a href="/Account/Register">Đăng ký thành viên</a></li>
+                                    }
+                                    else { 
+                                        <li><a href="/Account/LogOff">Đăng xuất</a></li>
+                                        <li><a href="/Account/Manage">Đổi mật khẩu</a></li>
+                                        <li><a href="/Account/Edit">Cập nhật hồ sơ</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="/Order/List">Đơn hàng</a></li>
+                                        <li><a href="/Order/Products">Hàng đã mua</a></li>
+                                    }
+                                </ul>
+                   			 </li>
+                            
+                        </ul>
+                        
+
+                    </div>
+                </nav>
+                
+            <div class="row">
+                <div class="col-md-4 nn-bordered text-left">DO YOU HAVE ANY QUESTION? CALL: (555) 343 458</div>
+                <div class="col-md-4 nn-bordered text-center">GET 15% OFF WHEN YOU SPEND OVER $100</div>
+                <div class="col-md-4 nn-bordered text-right">FREE SHIPPING! ALL ORDERS OVER $199</div>
+            </div><!--offer-->
+           <div class="page-heading">
+                <div class="container">
+                    <div class="nn-text-align-center">
+                        <h1 class=""><span>Customer Login</span></h1>
+                        <div class="breadcrumb">        
+                            <ul>
+                                <li class="Home">
+                                        <a href="http://newsmartwave.net/magento/legenda/index.php/" title="Home Page">Home</a>
+                                                                <span>/ </span>
+                                </li>
+                                <li class="My Account">
+                                        <strong>My Account</strong>
+                                </li>
+                            </ul>
+                            <a class="back-to visible-lg visible-md" href="javascript: history.go(-1)">
+                                Return to Previous Page                </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container ">
+                <div class="row">                
+                    <div class="col-xs-12">
+                        <div class="account-login">
+                            <div class="page-title">
+                                <h1>Login or Create an Account</h1>
+                            </div>
+                            <form action="http://newsmartwave.net/magento/legenda/index.php/customer/account/loginPost/" method="post" id="login-form">
+                            <input name="form_key" type="hidden" value="zjzk1bhhdUAFvHjY">
+                            <div class="row">            
+                                <div class="col-sm-6">
+                                    <div class="registered-users">
+                                        <div class="content">
+                                            <h2>Login</h2>
+                                            <p>If you have an account with us, please log in.</p>
+                                            <ul class="form-list">
+                                                <li>
+                                                    <label for="email" class="required"><em>*</em>Email Address</label>
+                                                    <div class="input-box">
+                                                        <input type="text" name="login[username]" value="" id="email" class="input-text required-entry validate-email" title="Email Address">
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <label for="pass" class="required"><em>*</em>Password</label>
+                                                    <div class="input-box">
+                                                        <input type="password" name="login[password]" class="input-text required-entry validate-password" id="pass" title="Password">
+                                                    </div>
+                                                </li>
+                                                                                                    </ul>
+                                            
+                    
+                    <script type="text/javascript">
+                    //<![CDATA[
+                        function toggleRememberMepopup(event){
+                            if($('remember-me-popup')){
+                                var viewportHeight = document.viewport.getHeight(),
+                                    docHeight      = $$('body')[0].getHeight(),
+                                    height         = docHeight > viewportHeight ? docHeight : viewportHeight;
+                                $('remember-me-popup').toggle();
+                                $('window-overlay').setStyle({ height: height + 'px' }).toggle();
+                            }
+                            Event.stop(event);
+                        }
+                    
+                        document.observe("dom:loaded", function() {
+                            new Insertion.Bottom($$('body')[0], $('window-overlay'));
+                            new Insertion.Bottom($$('body')[0], $('remember-me-popup'));
+                    
+                            $$('.remember-me-popup-close').each(function(element){
+                                Event.observe(element, 'click', toggleRememberMepopup);
+                            })
+                            $$('#remember-me-box a').each(function(element) {
+                                Event.observe(element, 'click', toggleRememberMepopup);
+                            });
+                        });
+                    //]]>
+                    </script>
+                                            <p class="required">* Required Fields</p>
+                                        </div>
+                                        <div class="buttons-set">
+                                            <button type="submit" class="button" title="Login" name="send" id="send2"><span><span>Login</span></span></button>
+                                            <a href="http://newsmartwave.net/magento/legenda/index.php/customer/account/forgotpassword/">Forgot Your Password?</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class=" new-users">
+                                        <div class="content">
+                                            <h2>Register</h2>
+                                            <p>By creating an account with our store, you will be able to move through the checkout process faster, store multiple shipping addresses, view and track your orders in your account and more.</p>
+                                        </div>
+                                        <div class="buttons-set">
+                                            <button type="button" title="Create an Account" class="button" onclick="window.location='http://newsmartwave.net/magento/legenda/index.php/customer/account/create/';"><span><span>Create an Account</span></span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                                </form>
+    <script type="text/javascript">
+    //<![CDATA[
+        var dataForm = new VarienForm('login-form', true);
+    //]]>
+    </script>
+</div>
+                </div>
+            </div>
+        </div>
+            <div class="nn-footer-container">
+            	<div class="container">
+                    <div class="col-md-4 nn-bordered text-left">
+                        <span class="colored-active">Follow Us:</span>
+                        <a href="#"><em class="">&nbsp;</em></a>
+                        <a href="#"><em class="fa fa-twitter">&nbsp;</em></a>
+                        <a href="#"><em class="fa fa-facebook">&nbsp;</em></a>
+                        <a href="#"><em class="fa fa-rss">&nbsp;</em></a>
+                    </div>
+                    <div class="col-md-4 nn-bordered text-center">
+                        <a href="#">Check Out Our New Offer!</a>
+                    </div>
+                    <div class="col-md-4 nn-bordered text-right">
+                        <a href="#"> Our Support Is Online 24/7 <span class="colored-active">Support Chat</span> </a>
+                    </div>
+                </div><!--offer-->
+                
+                <div class="nn-footer-top">
+                	<div class="row">
+                    	<div class="col-sm-3">
+                        	<h3 class="nn-footer-title">Sale Products</h3>
+                            <ul class="nn-footer-products-list">
+                                <li>
+                                	<div class="col-md-4">
+                                        <a href="http://newsmartwave.net/magento/legenda/index.php/awesome-ring-with-blue-stones.html" title="Awesome Ring With Blue Stones">
+                                           <img src="http://newsmartwave.net/magento/legenda/media/catalog/product/cache/1/small_image/62x/17f82f742ffe127f42dca9de82fb58b1/h/a/hackett-london-sakko-oliv_4_0081218000_001_1-copy6-600x652_1.jpg" alt="Awesome Ring With Blue Stones" >
+                                         </a> 
+                                     </div>
+                                     
+                                    <div class="nn-footer-price-box col-sm-8">
+                                    	<a href="http://newsmartwave.net/magento/legenda/index.php/awesome-ring-with-blue-stones.html" title="Awesome Ring With Blue Stones">
+                                        	<h5>Awesome Ring With Blue Stones </h5> 
+                                        </a>
+                                        <p class="nn-footer-old-price">
+                                             <span class="nn-footer-price" id="old-price-221"> 
+                                                $420.00
+                                             </span>
+                                        </p>
+                
+                                        <p class="nn-footer-special-price">                    
+                                            <span class="price" id="product-price-221">
+                                                $410.00 
+                                            </span>
+                                        </p>
+                                    </div>              
+                                                    				
+                            	</li>
+                               <li>
+                                	<div class="col-md-4">
+                                        <a href="http://newsmartwave.net/magento/legenda/index.php/awesome-ring-with-blue-stones.html" title="Awesome Ring With Blue Stones">
+                                           <img src="http://newsmartwave.net/magento/legenda/media/catalog/product/cache/1/small_image/62x/17f82f742ffe127f42dca9de82fb58b1/h/a/hackett-london-sakko-oliv_4_0081218000_001_1-copy6-600x652_1.jpg" alt="Awesome Ring With Blue Stones" >
+                                         </a> 
+                                     </div>
+                                     
+                                    <div class="nn-footer-price-box col-sm-8">
+                                    	<a href="http://newsmartwave.net/magento/legenda/index.php/awesome-ring-with-blue-stones.html" title="Awesome Ring With Blue Stones">
+                                        	<h5>Awesome Ring With Blue Stones </h5> 
+                                        </a>
+                                        <p class="nn-footer-old-price">
+                                             <span class="nn-footer-price" id="old-price-221"> 
+                                                $420.00
+                                             </span>
+                                        </p>
+                
+                                        <p class="nn-footer-special-price">                    
+                                            <span class="price" id="product-price-221">
+                                                $410.00 
+                                            </span>
+                                        </p>
+                                    </div>              
+                                                    				
+                            	</li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-3">
+                        	<h3 class="nn-footer-title">New Products</h3>
+                            <ul class="nn-footer-products-list">
+                                <li>
+                                	<div class="col-md-4">
+                                        <a href="http://newsmartwave.net/magento/legenda/index.php/awesome-ring-with-blue-stones.html" title="Awesome Ring With Blue Stones">
+                                           <img src="http://newsmartwave.net/magento/legenda/media/catalog/product/cache/1/small_image/62x/17f82f742ffe127f42dca9de82fb58b1/h/a/hackett-london-sakko-oliv_4_0081218000_001_1-copy6-600x652_1.jpg" alt="Awesome Ring With Blue Stones" >
+                                         </a> 
+                                     </div>
+                                     
+                                    <div class="nn-footer-price-box col-sm-8">
+                                    	<a href="http://newsmartwave.net/magento/legenda/index.php/awesome-ring-with-blue-stones.html" title="Awesome Ring With Blue Stones">
+                                        	<h5>Awesome Ring With Blue Stones </h5> 
+                                        </a>
+                                        <p class="nn-footer-old-price">
+                                             <span class="nn-footer-price" id="old-price-221"> 
+                                                $420.00
+                                             </span>
+                                        </p>
+                
+                                        <p class="nn-footer-special-price">                    
+                                            <span class="price" id="product-price-221">
+                                                $410.00 
+                                            </span>
+                                        </p>
+                                    </div>              
+                                                    				
+                            	</li>
+                                <li><span class="divider"></span></li>
+                                <li>
+                                	<div class="col-md-4">
+                                        <a href="http://newsmartwave.net/magento/legenda/index.php/awesome-ring-with-blue-stones.html" title="Awesome Ring With Blue Stones">
+                                           <img src="http://newsmartwave.net/magento/legenda/media/catalog/product/cache/1/small_image/62x/17f82f742ffe127f42dca9de82fb58b1/h/a/hackett-london-sakko-oliv_4_0081218000_001_1-copy6-600x652_1.jpg" alt="Awesome Ring With Blue Stones" >
+                                         </a> 
+                                     </div>
+                                     
+                                    <div class="nn-footer-price-box col-sm-8">
+                                    	<a href="http://newsmartwave.net/magento/legenda/index.php/awesome-ring-with-blue-stones.html" title="Awesome Ring With Blue Stones">
+                                        	<h5>Awesome Ring With Blue Stones </h5> 
+                                        </a>
+                                        <p class="nn-footer-old-price">
+                                             <span class="nn-footer-price" id="old-price-221"> 
+                                                $420.00
+                                             </span>
+                                        </p>
+                
+                                        <p class="nn-footer-special-price">                    
+                                            <span class="price" id="product-price-221">
+                                                $410.00 
+                                            </span>
+                                        </p>
+                                    </div>              
+                                                    				
+                            	</li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-3">
+                        	<h3 class="nn-footer-title">Recents Products</h3>
+                            <ul class="nn-footer-products-list">
+                                <li>
+                                	<div class="col-md-4">
+                                        <a href="http://newsmartwave.net/magento/legenda/index.php/awesome-ring-with-blue-stones.html" title="Awesome Ring With Blue Stones">
+                                           <img src="http://newsmartwave.net/magento/legenda/media/catalog/product/cache/1/small_image/62x/17f82f742ffe127f42dca9de82fb58b1/h/a/hackett-london-sakko-oliv_4_0081218000_001_1-copy6-600x652_1.jpg" alt="Awesome Ring With Blue Stones" >
+                                         </a> 
+                                     </div>
+                                     
+                                    <div class="nn-footer-price-box col-sm-8">
+                                    	<a href="http://newsmartwave.net/magento/legenda/index.php/awesome-ring-with-blue-stones.html" title="Awesome Ring With Blue Stones">
+                                        	<h5>Awesome Ring With Blue Stones </h5> 
+                                        </a>
+                                        <p class="nn-footer-old-price">
+                                             <span class="nn-footer-price" id="old-price-221"> 
+                                                $420.00
+                                             </span>
+                                        </p>
+                
+                                        <p class="nn-footer-special-price">                    
+                                            <span class="price" id="product-price-221">
+                                                $410.00 
+                                            </span>
+                                        </p>
+                                    </div>              
+                                                    				
+                            	</li>
+                                
+                               <li>
+                                	<div class="col-md-4">
+                                        <a href="http://newsmartwave.net/magento/legenda/index.php/awesome-ring-with-blue-stones.html" title="Awesome Ring With Blue Stones">
+                                           <img src="http://newsmartwave.net/magento/legenda/media/catalog/product/cache/1/small_image/62x/17f82f742ffe127f42dca9de82fb58b1/h/a/hackett-london-sakko-oliv_4_0081218000_001_1-copy6-600x652_1.jpg" alt="Awesome Ring With Blue Stones" >
+                                         </a> 
+                                     </div>
+                                     
+                                    <div class="nn-footer-price-box col-sm-8">
+                                    	<a href="http://newsmartwave.net/magento/legenda/index.php/awesome-ring-with-blue-stones.html" title="Awesome Ring With Blue Stones">
+                                        	<h5>Awesome Ring With Blue Stones </h5> 
+                                        </a>
+                                        <p class="nn-footer-old-price">
+                                             <span class="nn-footer-price" id="old-price-221"> 
+                                                $420.00
+                                             </span>
+                                        </p>
+                
+                                        <p class="nn-footer-special-price">                    
+                                            <span class="price" id="product-price-221">
+                                                $410.00 
+                                            </span>
+                                        </p>
+                                    </div>              
+                                                    				
+                            	</li>
+                            </ul>
+                        </div><!--end-footer-recent-product-->
+                        <div class="col-sm-3">
+                        	<h3 class="footer-title">Photos Flickr</h3>
+                            <div class="block-content">
+<a href="https://www.flickr.com/photos/105668816@N08/10310925903/" class="flickr-image" target="_blank"><img src="https://farm4.staticflickr.com/3780/10310925903_27bf4cb8dd_s.jpg" title="f01" alt="f01"></a><a href="https://www.flickr.com/photos/105668816@N08/10310925693/" class="flickr-image" target="_blank"><img src="https://farm6.staticflickr.com/5474/10310925693_d6b385800c_s.jpg" title="f02" alt="f02"></a><a href="https://www.flickr.com/photos/105668816@N08/10310772635/" class="flickr-image" target="_blank"><img src="https://farm6.staticflickr.com/5524/10310772635_154218bd04_s.jpg" title="f03" alt="f03"></a><a href="https://www.flickr.com/photos/105668816@N08/10310772645/" class="flickr-image" target="_blank"><img src="https://farm6.staticflickr.com/5506/10310772645_d23b460207_s.jpg" title="f04" alt="f04"></a><a href="https://www.flickr.com/photos/105668816@N08/10310772595/" class="flickr-image" target="_blank"><img src="https://farm4.staticflickr.com/3789/10310772595_1affd9da05_s.jpg" title="f05" alt="f05"></a><a href="https://www.flickr.com/photos/105668816@N08/10310925423/" class="flickr-image" target="_blank"><img src="https://farm8.staticflickr.com/7321/10310925423_189ee58c5a_s.jpg" title="f06" alt="f06"></a>    </div>
+                        </div><!--end phôt flickr-->
+                    </div>
+                </div>
+               <div class="nn-footer-bottom">
+                    <div class="container">
+                                        <div class="bordered-wrapper">
+                                            <div class="row">
+                                                    <div class="col-sm-3">
+                                    <div class="content-element">
+                                        <h3 class="footer-title">About Company</h3>
+        <div class="footer-custom-content">
+        <p>We are a company of highly skilled developers and designers, specialized in working with Magento/Wordpress system management</p>
+        <h6>Contact information</h6>
+        30 South Park Avenue Sanfrancisco, CA 94107 Phone: <span class="skype_c2c_print_container notranslate">+78 123 456 789</span><span id="skype_c2c_container" class="skype_c2c_container notranslate" dir="ltr" tabindex="-1" onmouseover="SkypeClick2Call.MenuInjectionHandler.showMenu(this, event)" onmouseout="SkypeClick2Call.MenuInjectionHandler.hideMenu(this, event)" onclick="SkypeClick2Call.MenuInjectionHandler.makeCall(this, event)" data-numbertocall="+78123456789" data-isfreecall="false" data-isrtl="false" data-ismobile="false"><span class="skype_c2c_highlighting_inactive_common" dir="ltr" skypeaction="skype_dropdown"><span class="skype_c2c_textarea_span" id="non_free_num_ui"><img width="0" height="0" class="skype_c2c_logo_img" src="chrome-extension://lifbcibllhkdhoafpjfnlhfpfgnpldfl/call_skype_logo.png"><span class="skype_c2c_text_span">+78 123 456 789</span><span class="skype_c2c_free_text_span"></span></span></span></span> <br> <br>
+        <ul class="links pay-icons hidden-phone">
+        <li><a href="#"><img src="http://newsmartwave.net/magento/legenda/media/wysiwyg/paypal.png" alt=""></a></li>
+        </ul>
+        </div>                             </div>
+                                </div>
+                                                                        <div class="col-sm-2">
+                                    <div class="content-element">
+                                        <h3 class="footer-title">Our Stores</h3>
+        <ul class="footer-menu">
+        <li><a href="#">London</a></li>
+        <li><a href="#">Singapore</a></li>
+        <li><a href="#">Paris</a></li>
+        <li><a href="#">Moscow</a></li>
+        <li><a href="#">Berlin</a></li>
+        <li><a href="#">Milano</a></li>
+        <li><a href="#">Amsterdam</a></li>
+        </ul>                             </div>
+                                </div>
+                                                                        <div class="col-sm-2">
+                                    <div class="content-element">
+                                        <h3 class="footer-title">Our Service</h3>
+        <ul class="footer-menu">
+        <li><a href="#">New Product</a></li>
+        <li><a href="#">Top sellers</a></li>
+        <li><a href="#">Specials</a></li>
+        <li><a href="#">Manufacturers</a></li>
+        <li><a href="#">Supplies</a></li>
+        <li><a href="#">Specials</a></li>
+        <li><a href="#">Custom Service</a></li>
+        </ul>                             </div>
+                                </div>
+                                                                        <div class="col-sm-2">
+                                    <div class="content-element">
+                                        <h3 class="footer-title">Our Offers</h3>
+        <ul class="footer-menu">
+        <li><a href="#">Contact us</a></li>
+        <li><a href="#">Delivery</a></li>
+        <li><a href="#">Returns</a></li>
+        <li><a href="#">Payment security</a></li>
+        <li><a href="#">Shopping online</a></li>
+        <li><a href="#">Size guide</a></li>
+        <li><a href="#">FAQs</a></li>
+        </ul>                             </div>
+                                </div>
+                                                                        <div class="col-sm-3">
+                                    <div class="content-element">
+                                        
+        
+        <script type="text/javascript">
+        function handleTweets(tweets){
+            var x = tweets.length;
+            var n = 0;
+            var element = document.getElementById('feed-container');
+            var html = '<ul>';
+            while(n < x) {
+              html += '<li>' + tweets[n] + '</li>';
+              n++;
+            }
+            html += '</ul>';
+            element.innerHTML = html;
+        }
+        function dateFormater(date) {
+            Date.now = Date.now || function() { return +new Date; };
+            datevalue = Date.now() - date;
+            
+            years = Math.floor(datevalue / (365*60*60*24*1000));
+            months = Math.floor(datevalue / (30*60*60*24*1000));
+            days = Math.floor(datevalue / (60*60*24*1000));
+            hours = Math.floor(datevalue / (60*60*1000));    
+            minutes  = Math.floor(datevalue / 60*1000);
+            seconds = Math.floor(datevalue/1000); 
+            
+            if ( days != 0 )  {
+                result = 'about'+ days + ' days ago';
+            }
+            else if (hours != 0 ) {
+                    result =  'about ' + hours + ' hours ago';
+            }
+            else if( minutes !=0 ) {
+                    result = 'about '+ minutes + '';
+            }
+            else {
+                    result = 'about ' + seconds + '';
+            }
+            return result;
+        }
+        
+        jQuery(document).ready(function(){
+            var widgetid = '362597660089274368';
+            var showcounts = 2;
+            twitterFetcher.fetch(widgetid, 'feed-container', showcounts, true, false, true, dateFormater, true);
+           
+        });
+        </script>
+        <div class="block-tweets">
+            <h3 class="footer-title twitter-title">Twitter</h3>
+            <div class="block-content" id="feed-container"><ul><li><p class="tweet">Please do not miss our best <a href="https://twitter.com/hashtag/Magento?src=hash" data-scribe="element:hashtag">#Magento</a> theme Legenda, has everything for a modern ecommerce. <a href="http://t.co/B8kE8TC5Zq" data-expanded-url="http://newsmartwave.net/preview.html?legenda_mg" target="_blank" title="http://newsmartwave.net/preview.html?legenda_mg" data-scribe="element:url"><span>http://</span><span>newsmartwave.net/preview.html?l</span><span>egenda_mg</span><span><span>&nbsp;</span>…</span></a></p><p class="timePosted">about2 days ago</p></li><li><p class="tweet">We've released new fashion ecommerce html5 theme, hope you to enjoy Fengo!
+        <a href="http://t.co/ZHuAeVi5QF" data-expanded-url="http://hu.je/219" target="_blank" title="http://hu.je/219" data-scribe="element:url"><span>http://</span><span>hu.je/219</span><span></span><span><span>&nbsp;</span></span></a></p><p class="timePosted">about5 days ago</p></li></ul></div>
+        </div>
+                                     </div>
+                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                </div>
+                    </div>
+            
+            	
+           
+        </div><!-- End container-->
+
+    </form>
+    <script>
+    $('.carousel').carousel({
+        interval: 1000
+    })
+</script>
+</body>
+</html>
+
