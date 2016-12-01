@@ -51,7 +51,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'https://hoatuoi-uphost.herokuapp.com'),
+    'url' => env('APP_URL', 'https://khaihoan-hoatuoi.herokuapp.com/'),
 
     /*
     |--------------------------------------------------------------------------
